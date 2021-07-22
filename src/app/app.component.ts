@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Device } from './models';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,31 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // title = 'angular-g2-project';
   title = "My first Angular project";
-  appMessage = "from AppComponent to FirstComponent";
+  // appMessage = "from AppComponent to FirstComponent";
 
+  // appMessageArray = ['hi', 'hello', 'goodbye'];
 
-  appEvent(event){
-    // alert('AppComponent event');
-    alert(event);
-  }
+  // showComponent = true;
+
+  // showHide() {
+  //   this.showComponent = !this.showComponent;
+  // }
+
+  // appEvent(event: string){
+  //   // alert('AppComponent event');
+  //   alert(event);
+  // }
+
+  devices: Device[] = [
+    {
+      name:  "Device01",
+      brand: "Lenovo",
+      model: "ITZ400"
+    },
+    {
+      name:  "Device02",
+      brand: "Dell",
+      model: "Latitude"
+    }
+  ]
 }
