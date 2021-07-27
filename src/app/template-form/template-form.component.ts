@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-template-form',
@@ -8,14 +9,13 @@ import { NgForm } from '@angular/forms';
 })
 export class TemplateFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   addDevice(form: NgForm){
-    // alert('add device');
-    console.log(form.value);
+    this.router.navigate(['/list']);
   }
 
 }

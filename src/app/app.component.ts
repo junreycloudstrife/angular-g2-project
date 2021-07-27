@@ -24,16 +24,4 @@ export class AppComponent {
   //   alert(event);
   // }
 
-  devices: Device[] = [
-    {
-      name:  "Device01",
-      brand: "Lenovo",
-      model: "ITZ400"
-    },
-    {
-      name:  "Device02",
-      brand: "Dell",
-      model: "Latitude"
-    }
-  ]
 }
