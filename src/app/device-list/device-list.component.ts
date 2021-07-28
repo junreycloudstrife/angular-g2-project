@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DeviceService } from '../device.service';
 import { Device } from './../models';
 
 @Component({
@@ -9,22 +10,15 @@ import { Device } from './../models';
 })
 export class DeviceListComponent implements OnInit {
 
-  devices: Device[] = [
-    {
-      name:  "Device01",
-      brand: "Lenovo",
-      model: "ITZ400"
-    },
-    {
-      name:  "Device02",
-      brand: "Dell",
-      model: "Latitude"
-    }
-  ]
+  devices: Device[];
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private deviceService: DeviceService
+    ) { }
 
   ngOnInit(): void {
+    this.devices = this.deviceService.getDevices();
   }
 
   addDevice(){
