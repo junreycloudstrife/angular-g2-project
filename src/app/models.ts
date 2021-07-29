@@ -3,3 +3,10 @@ export interface Device {
     brand: string;
     model: string;
 }
+
+export interface Post {
+    id: number;
+    userId: number;
+    title: string;
+    body: string;
+}
